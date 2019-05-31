@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Orlando Roads</title>
+</head>
+
+<body>
+    <h1>Welcome to Orlando</h1>
+    <p><span id="instructions">Avoiding I-4 is a way of life. Can you navigate the surface streets? Press the spacebar to begin playing and see how well you know the local roads.</span></p>
+    <p><span id="wordToGuess"></span></p>
+    <p><span id="remaingGuesses"></span></p>
+    <p><span id="lettersChosen"></span></p>
+
+
+    <script type="text/javascript">
+        //Global variables
+        var randomPick = "";
+        var guessesRemaining = 10;
+        var lettersChosen = [];
+
+        // Create an array of roads.
+        var roadList = ["Alafaya Trail", "Anderson Street", "Bumby Avenue", "Chickasaw Trail", "Church Street", "Colonial Drive", "Conroy Road", "Corrine Drive", "Curry Ford Road", "Econlockhatchee Trail", "Goldenrod Road", "Hiawassee Road", "International Drive", "John Young Parkway", "Kirkman Road", "Lake Underhill Road", "Michigan Street", "Mills Avenue", "Narcoossee Road", "Orange Avenue", "Orange Blossom Train", "Pine Hills Road", "Princeton Street", "Robinson Street", "Sand Lake Road", "Semoran Boulevard", "Silver Star Road", "Universal Boulevard", "University Boulevard"];
+
+
+        // Create variables that hold references to the places in the HTML where we want to display things.
+        var instructionsText = document.getElementById("instructions");
+        var instructionsText = document.getElementById("instructions");
+        var instructionsText = document.getElementById("instructions");
+        var instructionsText = document.getElementById("instructions");
+
+
+
+
+        //START PLAY
+        //User starts game by pressing spacebar
+        document.body.onkeyup = function (e) {
+            if (e.keyCode == 32) {
+                console.log("The spacebar was pressed.");
+
+                //Welcome message changes to instructions
+                instructionsText.textContent = "Choose a letter to reveal the name of a local road.  Choose wisely, or you may end up stuck in traffic.";
+
+
+                //Computer randomly chooses word.
+                randomPick = roadList[Math.floor(Math.random() * roadList.length)];
+                console.log(randomPick);
+
+                //Word is displayed on screen with blanks.
+
+                //Remaining guesses is diplayed.
+
+                //Letters chosen is displayed.
+
+
+
+
+
+                //WHILE guessesRemaining !=0  && wordGuessed != true
+                //Game Turn
+
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>

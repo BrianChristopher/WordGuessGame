@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TESTING MY CODE</title>
+</head>
+
+<body>
+    <h1>This is a test page.</h1>
+
+    <p><span id="instructions">This is the welcome message.</span></p>
+    <script type="text/javascript">
+
+    // Create variables that hold references to the places in the HTML where we want to display things.
+    var instructionsText = document.getElementById("instructions");
+
+        //User starts game by pressing spacebar
+        document.body.onkeyup = function (event) {
+            
+            if (event.keyCode == 32) {
+                console.log("The spacebar was pressed.");
+
+
+                instructionsText.textContent = "This is the new text, the instructions.";
+            }
+
+            
+
+
+        }
+
+
+
+            console.log("This is a test.")
+
+    </script>
+</body>
+
+</html>
